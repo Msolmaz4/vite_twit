@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    @apply bg-black text-white
+}
+/*
+genislik = 1265
+sol 275
+sag 350
+orta auto
+
+*/
