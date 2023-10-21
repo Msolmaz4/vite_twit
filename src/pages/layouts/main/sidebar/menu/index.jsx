@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom"
 import classNames from "classnames"
 import { mainMenu } from "../../../../../utils/consts"
+import Button from "../../../../../components/button"
 
 
 const Menu = () => {
@@ -44,6 +45,10 @@ const Menu = () => {
           </div>
      
       </button>
+      <div className="py-4 w-[90%]">
+         <Button size='large'>Post</Button>
+      </div>
+     
      
     </nav>
   )
