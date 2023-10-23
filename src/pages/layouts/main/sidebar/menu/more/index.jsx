@@ -1,4 +1,5 @@
 import { Popover , Disclosure } from "@headlessui/react"
+import classNames from "classnames"
 import { Link } from "react-router-dom"
 
 const More = () => {
@@ -38,11 +39,15 @@ const More = () => {
     <div className="pr-4 text-xl font-bold">Monetization</div>
 </button>
 
-
+<div className="h-px bg-[#2f3336] my-0.5 w-[89%] mx-auto"></div>
 <Disclosure>
+  {({open})=>(
+    <>
       <Disclosure.Button className="h-[52px] flex items-center px-4 font-bold justify-between w-full  transition-colors hover:bg-[#eff3f41a] text-white">
       Creator Studio
-      <svg viewBox="0 0 24 24" width={18.75} height={18.75} >
+      <svg className={classNames({
+        'rotate-180 text-[#1d9bf0]':open
+      })} viewBox="0 0 24 24" width={18.75} height={18.75} >
         <path  fill="currentColor" d="M3.543 8.96l1.414-1.42L12 14.59l7.043-7.05 1.414 1.42L12 17.41 3.543 8.96z"></path></svg>
       </Disclosure.Button>
       <Disclosure.Panel className="text-gray-500">
@@ -51,11 +56,20 @@ const More = () => {
         <g><path fill="currentColor" d="M8.75 21V3h2v18h-2zM18 21V8.5h2V21h-2zM4 21l.004-10h2L6 21H4zm9.248 0v-7h2v7h-2z"></path></g></svg>
        Analytics</Link>
       </Disclosure.Panel>
-    </Disclosure>
+    </>
+  )}
+     </Disclosure>
+
+
+
 <Disclosure>
+{({open})=>(
+    <>
       <Disclosure.Button className="h-[52px] flex items-center px-4 font-bold justify-between w-full  transition-colors hover:bg-[#eff3f41a] text-white">
       Professional Tools
-      <svg viewBox="0 0 24 24" width={18.75} height={18.75} >
+      <svg className={classNames({
+        'rotate-180 text-[#1d9bf0]':open
+      })} viewBox="0 0 24 24" width={18.75} height={18.75} >
         <path  fill="currentColor" d="M3.543 8.96l1.414-1.42L12 14.59l7.043-7.05 1.414 1.42L12 17.41 3.543 8.96z"></path></svg>
       </Disclosure.Button>
       <Disclosure.Panel className="text-gray-500">
@@ -63,11 +77,20 @@ const More = () => {
         <svg  width={18.75} height={18.75}  viewBox="0 0 24 24" aria-hidden="true"><g><path fill="currentColor" d="M1.996 5.5c0-1.38 1.119-2.5 2.5-2.5h15c1.38 0 2.5 1.12 2.5 2.5v13c0 1.38-1.12 2.5-2.5 2.5h-15c-1.381 0-2.5-1.12-2.5-2.5v-13zm2.5-.5c-.277 0-.5.22-.5.5v13c0 .28.223.5.5.5h15c.276 0 .5-.22.5-.5v-13c0-.28-.224-.5-.5-.5h-15zm8.085 5H8.996V8h7v7h-2v-3.59l-5.293 5.3-1.415-1.42L12.581 10z"></path></g></svg>
        Ads</Link>
       </Disclosure.Panel>
+    
+    </>
+    )}
     </Disclosure>
+
+
 <Disclosure>
-      <Disclosure.Button className="h-[52px] flex items-center px-4 font-bold justify-between w-full  transition-colors hover:bg-[#eff3f41a] text-white">
+{({open})=>(
+    <>
+    <Disclosure.Button className="h-[52px] flex items-center px-4 font-bold justify-between w-full  transition-colors hover:bg-[#eff3f41a] text-white">
       Settings and Support
-      <svg viewBox="0 0 24 24" width={18.75} height={18.75} >
+      <svg className={classNames({
+        'rotate-180 text-[#1d9bf0]':open
+      })} viewBox="0 0 24 24" width={18.75} height={18.75} >
         <path  fill="currentColor" d="M3.543 8.96l1.414-1.42L12 14.59l7.043-7.05 1.414 1.42L12 17.41 3.543 8.96z"></path></svg>
       </Disclosure.Button>
       <Disclosure.Panel className="text-gray-500">
@@ -88,8 +111,13 @@ const More = () => {
        Keyborad schortcuts
        </Link>
       </Disclosure.Panel>
-    </Disclosure>
+  
 
+    </>
+    )}
+  </Disclosure>
+
+      
 
 
     </Popover.Panel>
