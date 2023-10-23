@@ -1,10 +1,15 @@
-import { useState } from "react"
+import { useRef, useState } from "react"
+import { useClickAway } from "react-use";
 
 
 const Search = () => {
 
     const [query ,setQuery] = useState('')
     const [focus ,setFocus] = useState(false)
+    const ref = useRef()
+    useClickAway(ref,()=>{
+        console.log('outside cliked')
+    })
 
 
   return (
