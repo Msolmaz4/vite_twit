@@ -1,7 +1,10 @@
+import store from '../store'
+
+
 export const mainMenu = [
     {
         path:'/',
-        title:'Anasayfa',
+        title:'Home',
         icon : {
             active:(
                 <svg viewBox="0 0 24 24" aria-hidden="true" width={26.25} height={26.25} fill="#fff"><g><path d="M21.591 7.146L12.52 1.157c-.316-.21-.724-.21-1.04 0l-9.071 5.99c-.26.173-.409.456-.409.757v13.183c0 .502.418.913.929.913h6.638c.511 0 .929-.41.929-.913v-7.075h3.008v7.075c0 .502.418.913.929.913h6.639c.51 0 .928-.41.928-.913V7.904c0-.301-.158-.584-.408-.758zM20 20l-4.5.01.011-7.097c0-.502-.418-.913-.928-.913H9.44c-.511 0-.929.41-.929.913L8.5 20H4V8.773l8.011-5.342L20 8.764z"></path></g></svg>
@@ -17,7 +20,7 @@ export const mainMenu = [
     },
     {
         path:'/explore',
-        title:'Kesfet',
+        title:'Explore',
         icon:{
             active:(
                 <svg viewBox="0 0 24 24" aria-hidden="true"  width={26.25} height={26.25} fill="#fff"><g><path d="M19.993 9.042C19.48 5.017 16.054 2 11.996 2s-7.49 3.021-7.999 7.051L2.866 18H7.1c.463 2.282 2.481 4 4.9 4s4.437-1.718 4.9-4h4.236l-1.143-8.958zM12 20c-1.306 0-2.417-.835-2.829-2h5.658c-.412 1.165-1.523 2-2.829 2zm-6.866-4l.847-6.698C6.364 6.272 8.941 4 11.996 4s5.627 2.268 6.013 5.295L18.864 16H5.134z"></path></g></svg>
@@ -30,7 +33,7 @@ export const mainMenu = [
     },
     {
         path:'/notifications',
-        title:'Bildirimler',
+        title:'Notifications',
         notification:4,
         icon:{
             active:(
@@ -46,8 +49,8 @@ export const mainMenu = [
 
     },
     {
-        path:'/mesajlar',
-        title:'Mesajlar',
+        path:'/messages',
+        title:'Messages',
         
         icon:{
             active:(
@@ -60,8 +63,8 @@ export const mainMenu = [
 
     },
     {
-        path:'/listeler',
-        title:'Listeler',
+        path:'/lists',
+        title:'List',
         icon:{
             active:(
                 <svg viewBox="0 0 24 24" aria-hidden="true" width={26.25} height={26.25} fill="#fff"><g><path d="M18.5 2h-13C4.12 2 3 3.12 3 4.5v15C3 20.88 4.12 22 5.5 22h13c1.38 0 2.5-1.12 2.5-2.5v-15C21 3.12 19.88 2 18.5 2zM16 14H8v-2h8v2zm0-4H8V8h8v2z"></path></g></svg>
@@ -72,6 +75,22 @@ export const mainMenu = [
         }
 
     },
+    {
+        path:'/bookmarks',
+        title:'Bookmarks',
+        icon:{
+            active:(
+                <svg viewBox="0 0 24 24" aria-hidden="true"  width={26.25} height={26.25} fill="#fff"><g><path d="M4 4.5C4 3.12 5.119 2 6.5 2h11C18.881 2 20 3.12 20 4.5v18.44l-8-5.71-8 5.71V4.5z"></path></g></svg>
+            ),
+            passive:(  
+                <svg viewBox="0 0 24 24" aria-hidden="true" width={26.25} height={26.25} fill="#fff"><g><path d="M4 4.5C4 3.12 5.119 2 6.5 2h11C18.881 2 20 3.12 20 4.5v18.44l-8-5.71-8 5.71V4.5zM6.5 4c-.276 0-.5.22-.5.5v14.56l6-4.29 6 4.29V4.5c0-.28-.224-.5-.5-.5h-11z"></path></g></svg>
+            ),
+        }
+
+    },
+
+
+
     {
         path:'/communities',
         title:'Comnuties',
@@ -99,7 +118,9 @@ export const mainMenu = [
 
     },
     {
-        path:'/profile',
+        path: ()=>{
+            return `${store.getState()?.auth?.currentAccount?.username}`
+        } ,
         title:'Profile',
         icon:{
             active:(

@@ -2,8 +2,30 @@ import { createSlice } from "@reduxjs/toolkit";
 
 
 const initialState = {
-    currentAccount:false,
-    accounts:[]
+    currentAccount:{
+        id:1,
+        username:'kykMustafa',
+        fullname:'Mustafa',
+        avatar:'https://pixabay.com/tr/vectors/avatar-simge-yer-tutucu-facebook-1577909/'
+    },
+    accounts:[
+
+        {
+            id:1,
+            username:'kykMustafa',
+            fullname:'Mustafa',
+            avatar:'https://pixabay.com/tr/vectors/avatar-simge-yer-tutucu-facebook-1577909/'
+        },
+        {
+            id:2,
+            username:'adana',
+            fullname:'asana',
+            avatar:'https://pixabay.com/tr/vectors/avatar-simge-yer-tutucu-facebook-1577909/'
+        },
+
+
+
+    ]
 
 }
 

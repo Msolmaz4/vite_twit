@@ -1,3 +1,4 @@
+import Account from "./account"
 import Logo from "./logo/Logo"
 import Menu from "./menu"
 
@@ -9,9 +10,7 @@ const Sidebar = () => {
         sidebar
         <Logo/>
         <Menu/>
-        <div className="mt-auto">
-          test
-        </div>
+       <Account/>
         
         </aside>
   )
