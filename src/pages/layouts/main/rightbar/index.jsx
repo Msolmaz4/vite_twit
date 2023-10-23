@@ -1,10 +1,11 @@
+import Search from "./search"
 
 
 const Rightbar = () => {
   return (
     <div className="w-[350px] mr-2.5">
 
-        rightbart
+     <Search/>
     </div>
   )
 }

@@ -10,17 +10,13 @@ export default function More ({ close }){
         <div>
             {
                 accounts.map(account=>(
-                    
                     <button 
                     type="button"
                     disabled={currentAccount.id === account.id}
                     onClick={( ) => {
                         setCurrentAccount(account)
                         close()
-                    }
-                        
-                        }
-                    
+                    }}
                     className={classNames("py-3 px-4 flex text-left  w-full transition-colors",{
                        ' hover:bg-[#eff3f41a]' :currentAccount.id != account.id
                     })}>
