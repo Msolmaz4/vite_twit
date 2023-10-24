@@ -1,4 +1,5 @@
 import Premium from "../../../../components/premium"
+import Topics from "../../../../components/topics"
 import Search from "./search"
 
 
@@ -8,6 +9,7 @@ const Rightbar = () => {
 
      <Search/>
      <Premium/>
+     <Topics/>
     </div>
   )
 }

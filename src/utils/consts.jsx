@@ -135,4 +135,20 @@ export const mainMenu = [
    
 ]
 
- 
+ export const topics =[
+    {
+        title:'UEFA Champions League · Trending',
+        topic:{
+            type:'tag',
+            value:'GSvFCB'
+        }
+    },
+    {
+        title:'Trending',
+        topic:{
+            type:'query',
+            value:'JKvsP7'
+        }
+    },
+
+ ]
