@@ -22,6 +22,7 @@ const Search = () => {
             <input
              type="text"
              value={query}
+             placeholder="search"
              onFocus={()=>setFocus(true)}
              onBlur={()=>setFocus(false)}
              onChange={e=>setQuery(e.target.value)}
