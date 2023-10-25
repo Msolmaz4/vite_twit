@@ -148,7 +148,8 @@ export const mainMenu = [
         topic:{
             type:'query',
             value:'JKvsP7'
-        }
+        },
+        postCount:23450
     },
 
  ]
